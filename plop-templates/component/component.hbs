@@ -1,0 +1,21 @@
+{{#if (eq withStyles "default")}}
+import './{{proper name}}.scss'
+
+{{/if}}
+{{#if (eq withStyles "module")}}
+import classes from './{{proper name}}.module.scss'
+
+{{/if}}
+{{#if withProps}}
+interface {{proper name}}Props {
+
+}
+
+{{/if}}
+{{#if withProps}}
+export function {{proper name}}({}: {{proper name}}Props) {
+{{else}}
+export function {{proper name}}() {
+{{/if}}
+  return <p>{{proper name}} component</p>;
+}

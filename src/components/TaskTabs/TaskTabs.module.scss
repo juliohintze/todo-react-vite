@@ -1,0 +1,27 @@
+.task-tabs {
+  display: flex;
+
+  label {
+    border: 1px solid gray;
+    padding: 2px 16px;
+    cursor: pointer;
+    
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    &.active {
+      background-color: lightgreen;
+      color: #222222;
+    }
+    
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
